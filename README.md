@@ -1,12 +1,10 @@
 # Aula Mongo DB
 
 
-# Introdução ao Banco de dados
-
-## História do banco de dados
+## 🏦 História do banco de dados
 A motivação de criar um sistema para armazenagem de dados surgiu devido ao alto custo de leitura/escrita de arquivos no HD. Os primeiros fundamentos de banco de dados relacionais surgiram entre as décadas de 1960 a 1970 pela IBM. Na  década de 80,  a primeira empresa a desenvolver o banco utilizando o padrão SQL para consulta/escrita como é conhecido hoje , foi a Oracle, com a permissão da IBM.
 
-##  As diferenças De SQL(relacional) vs NOSQL(não relacional)
+####  As diferenças De SQL(relacional) vs NOSQL(não relacional)
 
 No resumo, um banco de dados SQL, é aquele que possui tabelas e que podem ter relação entre si. Para relacionar uma tabela com uma ou mais  é necessário uma chave, podendo ser primária ou estrangeira. Um banco NOSQL é aquele que possui uma estrutura de chave/valor, sem relação entre si.
 
@@ -38,7 +36,7 @@ Exemplo de consulta em NOSQL com Mongo
 
 - Os mais conhecidos do mercado atualmente são o MongoDB, Redis e o Firebase.
 
-## Introdução ao Mongo
+###  Introdução ao Mongo
 Mongodb é um banco de dados NOSQL (não relacional) que surgiu em 2009 e foi desenvolvido em C + +. Ele utiliza BJSON que é bem similar com o JSON, sua linguagem de consulta/escrita é javascript, logo, por ser uma  linguagem comum ( eu amo o js ),  a sua curva de aprendizagem é pequena  para quem vem da web.
 
   alguns comandos com mongo
@@ -89,7 +87,7 @@ exmplo:
 
 ```
 
-### Introdução ao ORM
+## 🔨 Introdução ao ORM
 Um ORM é uma `técnica de desenvolvimento para nós devas`, conseguimos manipular de forma simples o nosso banco, sem ele precisamos de um especialista(DBA). Nos permite fazer como por exemplo `migrations` ( versionamento de base ) de forma simples.
 
 ### Introdução ao ORM Mongoose
@@ -138,7 +136,7 @@ Exemplo de como criar uma model
 ```javascript
 const MusicaModel = mongoose.model('musica', MusicaSchema);
 ```
-Obs: Não é necessário salvar como músicas, pois o ORM cria no plural por nós, que massa né :nail_care:
+Obs: Não é necessário salvar como músicas, pois o ORM cria no plural por nós, que massa né 💅
 
 ### ObjectId( )
 O ObjectID é um identificador único para cada documento, ele é gerado automaticamente, podemos pensar nele como um CPF, único por dado, é por ele que consegue identificar um `Document` realizar as operações do CRUD.
@@ -147,7 +145,7 @@ O ObjectID é um identificador único para cada documento, ele é gerado automat
     const musicId = new moogose.Types.ObjectId();
 ```
 
-## Classes | OOP (orientação a objetos) Conceitos básicos
+##  🧑🏽‍💻 Classes | OOP (orientação a objetos) Conceitos básicos
 Uma breve introdução sobre classes e objetos, para que possamos entender melhor o que o nosso ORM.
 
 ###  uso da palavra reservada new
@@ -193,7 +191,7 @@ Na programação, existem tipos primários, que são responsáveis por definir o
  
 
 
-## Arquitetura do Projeto
+## 📑 Arquitetura do Projeto
 ```
 ReprogramaMusic  
 ├── api_com_mongo           
@@ -216,9 +214,9 @@ ReprogramaMusic
 
 
 
-### Referências
+###  📖 Referências
 
 
 
-### Trabalho entregável
+###  🎓 Combinado da semana
 
