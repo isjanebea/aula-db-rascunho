@@ -1,9 +1,61 @@
-# Aula Mongo DB
+# TITULO DO REPOSITORIO
 
 ##   🧑🏽‍💻 Apresentação
 
   Meu nome é Beatriz Ramerindo, sou Engenheira de Software, atualmente com desenvolvimento back-end com Spring boot Com Koltin e Node com Express com TypeScript/JavaScript. Sou carioca, mas estou atualmente resido em São Paulo, tenho como Hobbies assistir um pirata que estica e jogar um Lol.
 
+
+###  👩🏽‍🏫 recadinho da professora 
+    - Bebam água meninas
+    - Qualquer pergunta é válida, principalmente aquela que a gente pensa que não faz sentido.
+    - Pode deixar a camera aberta para a prof não se sentir sozinha
+    
+### 📑 Conteúdo da Aula
+
+    - Introdução ao Banco de Dados(sql, nosql, mongo e orm)
+    - Projeto sem mongo
+    - Criar conta no MongoAtlas
+    - Projeto com mongo
+    - get com mongo
+    - post com mongo
+    - patch com mongo
+
+## 📑 Arquitetura do Projeto
+```
+ReprogramaMusic  
+├── api_com_mongo           
+│    ├─ src                       
+│    │  ├─ controllers            
+│    │  │  └─ musicController.js  
+│    │  ├─ database               
+│    │  │  └─ moogoseConnect.js      
+│    │  ├─ models                 
+│    │  │  └─ musicModel.js      
+│    │  ├─ routes                 
+│    │  │  └─ musicRouter.js      
+│    │  └─ app.js                 
+│    ├─ package-lock.json         
+│    ├─ package.json  
+│    ├─ .gitignore            
+│    └─ server.js
+|
+├── api_sem_mongo           
+│    ├─ src                       
+│    │  ├─ controllers            
+│    │  │  └─ musicController.js      
+│    │  ├─ models                 
+│    │  │  └─ music.json      
+│    │  ├─ routes                 
+│    │  │  | index.js
+│    |  |  └─musicRouter.js   
+│    │  └─ app.js                 
+│    ├─ package-lock.json         
+│    ├─ package.json
+│    ├─ .gitignore      
+│    └─ server.js
+|
+└─README.md
+```
 
 ## 🏦 História do banco de dados
 
@@ -41,7 +93,7 @@ Exemplo de consulta em NOSQL com Mongo
 
 - Os mais conhecidos do mercado atualmente são o MongoDB, Redis e o Firebase.
 
-###  Introdução ao Mongo
+## 🏦 Introdução ao Mongo
 Mongodb é um banco de dados NOSQL (não relacional) que surgiu em 2009 e foi desenvolvido em C + +. Ele utiliza BJSON que é bem similar com o JSON, sua linguagem de consulta/escrita é javascript, logo, por ser uma  linguagem comum ( eu amo o js ),  a sua curva de aprendizagem é pequena  para quem vem da web.
 
   alguns comandos com mongo
@@ -123,11 +175,6 @@ const MusicaSchema = monogoose.Schema({
 ### `[]` Model
 Nossa `Model` ( modelo ) é a nossa representação da Collection ( coleção ), nele assim como no Array, possuímos `métodos` ( funções ) que nos permite realizar as operações do CRUD: 
 
-- `C` -> criar  -- post
-- `R` -> leitura  -- get
-- `U` -> atualizar -- put/patch
-- `D` -> deletar ) -- delete
-
 | OPERAÇÃO| DESCRIÇÃO | HTTP |
 | --- | --- | --- |
 | C | criar/gerar | POST |
@@ -150,7 +197,7 @@ O ObjectID é um identificador único para cada documento, ele é gerado automat
     const musicId = new moogose.Types.ObjectId();
 ```
 
-##  🧑🏽‍💻 Classes | OOP (orientação a objetos) Conceitos básicos
+## 🧑🏽‍💻 Classes | OOP (orientação a objetos) Conceitos básicos
 Uma breve introdução sobre classes e objetos, para que possamos entender melhor o que o nosso ORM.
 
 ###  uso da palavra reservada `new`
@@ -194,55 +241,19 @@ Na programação, existem tipos primários, que são responsáveis por definir o
  - Number -> representa número  `0`
  - Boolean -> representa `true` ou `false`
  
-##  📖 Referências
+## 📖 Referências
 
 
 ## ⚙️ Dependencias do Projeto
- - Mongoose
- - Cors
- - Express
- - Nodemom
+    - Mongoose
+    - Cors
+    - Express
+    - Nodemom
 
 ## 💻 Dependências de ambiente
- - Node `~> 16`
- - Mongodb > `~> 16`
+- Node `~> 16`
+- Mongodb > `~> 16`
 
-## 📑 Arquitetura do Projeto
-```
-ReprogramaMusic  
-├── api_com_mongo           
-│    ├─ src                       
-│    │  ├─ controllers            
-│    │  │  └─ musicController.js  
-│    │  ├─ database               
-│    │  │  └─ moogoseConnect.js      
-│    │  ├─ models                 
-│    │  │  └─ musicModel.js      
-│    │  ├─ routes                 
-│    │  │  └─ musicRouter.js      
-│    │  └─ app.js                 
-│    ├─ package-lock.json         
-│    ├─ package.json  
-│    ├─ .gitignore            
-│    └─ server.js
-|
-├── api_sem_mongo           
-│    ├─ src                       
-│    │  ├─ controllers            
-│    │  │  └─ musicController.js      
-│    │  ├─ models                 
-│    │  │  └─ music.json      
-│    │  ├─ routes                 
-│    │  │  | index.js
-│    |  |  └─musicRouter.js   
-│    │  └─ app.js                 
-│    ├─ package-lock.json         
-│    ├─ package.json
-│    ├─ .gitignore      
-│    └─ server.js
-|
-└─README.md
-```
 
 ###  🎓 Combinado da semana
 
