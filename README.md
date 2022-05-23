@@ -237,12 +237,27 @@ Nosso `constructor` é responsável por inicializar a nossa classe, ele recebe o
 ### Tipagem - Tipos primários
 Na programação, existem tipos primários, que são responsáveis por definir o tipo de informação ( dado ) que estamos trabalhando, por exemplo um número de celular `Number`, ou um email que é texto `String`, ou até mesmo se é verdadeiro(true) ou falso(false) que é um `Boolean`.
 
- - String -> representa texto -> `""`
- - Number -> representa número  `0`
+ - String -> representa *texto* -> `""`
+ - Number -> representa *número*  `0`
  - Boolean -> representa `true` ou `false`
  
-## 📖 Referências
 
+### 🎥 Videos de apoio
+
+- [Resumo Mongodb - Codigo Fonte TV](https://www.youtube.com/watch?v=4dTI1mVLX3I)
+- [nodeJs Express Mongo - Api rest full Turitorial](https://www.youtube.com/watch?v=K5QaTfE5ylk)
+- [O que é banco de dados? - Curso em Video](https://www.youtube.com/watch?v=Ofktsne-utM)
+
+### 📖 Referências
+- https://www.gartner.com/en/information-technology/glossary/object-data-model
+- https://medium.com/tkssharma/node-js-with-mongoose-odm-9697c09665df
+- https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose
+- https://docs.mongodb.com/
+- https://docs.mongodb.com/manual/crud/
+- https://docs.atlas.mongodb.com/tutorial/create-new-cluster/
+- https://studio3t.com/academy/topic/mongodb-vs-sql-concepts/
+- https://dzone.com/articles/sql-vs-nosql
+- https://mongoosejs.com/docs/index.html
 
 ## ⚙️ Dependencias do Projeto
     - Mongoose
