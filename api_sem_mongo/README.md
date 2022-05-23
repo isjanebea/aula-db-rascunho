@@ -94,6 +94,18 @@ const musica = new MusicaModel({
 ### Métodos
 Como mencionamos em aulas passadas assim como objeto, classes possuiem métotodos, que são funções que nos auxiliam a realizar ações como por exemplo: salvar um dado. Ou nosso nosso `console.log` `.log()` é um método que permite imprimir no terminal uma mensagem de texto.
 
+### Relação com CRUD
+
+Relação de metodos com o `CRUD`
+
+| OPERAÇÃO | MONGODB | MOOGOSE | DESCRIÇÃO | HttpStatus
+| --- | --- | --- | --- | ---- |
+| **C**REATE | db.insertOne() | new MusicaModel() | cria um documento | 201 |
+| **R**EAD | db.find() |  MusicaModel.find() | ler um documento | 200 |
+| **U**PDATE | db.updateOne() | MusicaModel.updateOne() | atualiza um documento | 200 |
+| **D**ELETE | db.deleteOne() | MusicaModel.deleteOne() | deleta um documento | 200 ou 204
+
+
 ### Constructor
 Nosso `constructor` é responsável por inicializar a nossa classe, ou seja, eu passo os parametros da música que quero criar e ela a constrói.
 
@@ -103,6 +115,7 @@ Na programação, existem tipos primários, que são responsáveis por definir o
  - String -> representa texto -> `""`
  - Number -> representa número  `0`
  - Boolean -> representa `true` ou `false`
+ 
 
 ## Arquitetura do Projeto
 ```
@@ -124,6 +137,8 @@ ReprogramaMusic
     ├─ README.md        
     └─ server.js
 ```
+
+
 
 ### Referências
 
