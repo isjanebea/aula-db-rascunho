@@ -1,7 +1,12 @@
 # Aula Mongo DB
 
+##   🧑🏽‍💻 Apresentação
+
+  Meu nome é Beatriz Ramerindo, sou Engenheira de Software, atualmente com desenvolvimento back-end com Spring boot Com Koltin e Node com Express com TypeScript/JavaScript. Sou carioca, mas estou atualmente resido em São Paulo, tenho como Hobbies assistir um pirata que estica e jogar um Lol.
+
 
 ## 🏦 História do banco de dados
+
 A motivação de criar um sistema para armazenagem de dados surgiu devido ao alto custo de leitura/escrita de arquivos no HD. Os primeiros fundamentos de banco de dados relacionais surgiram entre as décadas de 1960 a 1970 pela IBM. Na  década de 80,  a primeira empresa a desenvolver o banco utilizando o padrão SQL para consulta/escrita como é conhecido hoje , foi a Oracle, com a permissão da IBM.
 
 ####  As diferenças De SQL(relacional) vs NOSQL(não relacional)
@@ -87,7 +92,7 @@ exmplo:
 
 ```
 
-## 🔨 Introdução ao ORM
+## ⚙️ Introdução ao ORM
 Um ORM é uma `técnica de desenvolvimento para nós devas`, conseguimos manipular de forma simples o nosso banco, sem ele precisamos de um especialista(DBA). Nos permite fazer como por exemplo `migrations` ( versionamento de base ) de forma simples.
 
 ### Introdução ao ORM Mongoose
@@ -148,7 +153,7 @@ O ObjectID é um identificador único para cada documento, ele é gerado automat
 ##  🧑🏽‍💻 Classes | OOP (orientação a objetos) Conceitos básicos
 Uma breve introdução sobre classes e objetos, para que possamos entender melhor o que o nosso ORM.
 
-###  uso da palavra reservada new
+###  uso da palavra reservada `new`
 Quando possuímos uma classe, podemos utilizar a palavra reservada `new`  para instanciar um objeto, ou seja, construir um novo documento a partir da classe( nossa schema ). Afinal, não queremos que a música da Anitta seja a mesma da Ludmila.
 
 ```javascript
@@ -189,34 +194,61 @@ Na programação, existem tipos primários, que são responsáveis por definir o
  - Number -> representa número  `0`
  - Boolean -> representa `true` ou `false`
  
+##  📖 Referências
 
+
+## ⚙️ Dependencias do Projeto
+ - Mongoose
+ - Cors
+ - Express
+ - Nodemom
+
+## 💻 Dependências de ambiente
+ - Node `~> 16`
+ - Mongodb > `~> 16`
 
 ## 📑 Arquitetura do Projeto
 ```
 ReprogramaMusic  
 ├── api_com_mongo           
-    ├─ src                       
-    │  ├─ controllers            
-    │  │  └─ musicController.js  
-    │  ├─ database               
-    │  │  └─ moogoseConnect.js      
-    │  ├─ models                 
-    │  │  └─ musicModel.js      
-    │  ├─ routes                 
-    │  │  └─ musicRouter.js      
-    │  └─ app.js                 
-    ├─ package-lock.json         
-    ├─ package.json  
-    ├─ .gitignore   
-    ├─ README.md        
-    └─ server.js
+│    ├─ src                       
+│    │  ├─ controllers            
+│    │  │  └─ musicController.js  
+│    │  ├─ database               
+│    │  │  └─ moogoseConnect.js      
+│    │  ├─ models                 
+│    │  │  └─ musicModel.js      
+│    │  ├─ routes                 
+│    │  │  └─ musicRouter.js      
+│    │  └─ app.js                 
+│    ├─ package-lock.json         
+│    ├─ package.json  
+│    ├─ .gitignore            
+│    └─ server.js
+|
+├── api_sem_mongo           
+│    ├─ src                       
+│    │  ├─ controllers            
+│    │  │  └─ musicController.js      
+│    │  ├─ models                 
+│    │  │  └─ music.json      
+│    │  ├─ routes                 
+│    │  │  | index.js
+│    |  |  └─musicRouter.js   
+│    │  └─ app.js                 
+│    ├─ package-lock.json         
+│    ├─ package.json
+│    ├─ .gitignore      
+│    └─ server.js
+|
+└─README.md
 ```
-
-
-
-###  📖 Referências
-
-
 
 ###  🎓 Combinado da semana
 
+
+### 👋🏾 Minhas redes sociais
+ - [LINKEDIN](https://www.linkedin.com/in/beatriz-ramerindo/)
+ - [GITHUB](https://github.com/isjanebia)
+ - [INSTAGRAN](https://www.instagram.com/isjanebea/)
+ - [SITE](beatriz.ramerindo.com.br)
