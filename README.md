@@ -2,8 +2,7 @@
 
 ##   🧑🏽‍💻 Apresentação
 
-  Meu nome é Beatriz Ramerindo, sou Engenheira de Software, atualmente com desenvolvimento back-end com Spring boot Com Koltin e Node com Express com TypeScript/JavaScript. Sou carioca, mas estou atualmente resido em São Paulo, tenho como Hobbies assistir um pirata que estica e jogar um Lol.
-
+  Meu nome é Beatriz Ramerindo, sou Engenheira de Software, atualmente com desenvolvimento back-end com Spring boot Com Koltin e Node com Express com TypeScript/JavaScript. Sou carioca, mas estou atualmente resido em São Paulo, tenho como Hobbies assistir um pirata que estica.
 
 ###  👩🏽‍🏫 recadinho da professora 
     - Bebam água meninas
@@ -15,6 +14,7 @@
     - Introdução ao Banco de Dados(sql, nosql, mongo e orm)
     - Projeto sem mongo
     - Criar conta no MongoAtlas
+    - Conhecendo o mongoCompass
     - Projeto com mongo
     - get com mongo
     - post com mongo
@@ -59,7 +59,7 @@ ReprogramaMusic
 
 ## 🏦 História do banco de dados
 
-A motivação de criar um sistema para armazenagem de dados surgiu devido ao alto custo de leitura/escrita de arquivos no HD. Os primeiros fundamentos de banco de dados relacionais surgiram entre as décadas de 1960 a 1970 pela IBM. Na  década de 80,  a primeira empresa a desenvolver o banco utilizando o padrão SQL para consulta/escrita como é conhecido hoje , foi a Oracle, com a permissão da IBM.
+A motivação de criar um sistema para armazenagem de dados surgiu devido ao alto custo de leitura/escrita de arquivos no HD. Os primeiros fundamentos de banco de dados relacionais surgiram entre as décadas de 1960 a 1970 pela IBM. Na  década de 80, a Oracle, com a permissão da IBM, foi a primeira empresa a desenvolver o banco utilizando o padrão SQL para consulta/escrita como é conhecido hoje. Após a explosão da web, também conhecida como web 2.0, foi necessário uma alternativa ao SQL, pois na época as empresas , a partir de 1998, surgi
 
 ####  As diferenças De SQL(relacional) vs NOSQL(não relacional)
 
@@ -198,10 +198,10 @@ O ObjectID é um identificador único para cada documento, ele é gerado automat
 ```
 
 ## 🧑🏽‍💻 Classes | OOP (orientação a objetos) Conceitos básicos
-Uma breve introdução sobre classes e objetos, para que possamos entender melhor o que o nosso ORM.
+Uma breve introdução sobre classes e objetos, para que possamos entender melhor o  nosso ORM.
 
 ###  uso da palavra reservada `new`
-Quando possuímos uma classe, podemos utilizar a palavra reservada `new`  para instanciar um objeto, ou seja, construir um novo documento a partir da classe( nossa schema ). Afinal, não queremos que a música da Anitta seja a mesma da Ludmila.
+Quando possuímos uma classe, podemos utilizar a palavra reservada `new`  para instanciar um objeto, ou seja, construir um novo documento a partir da classe( nossa `Schema` ),  afinal, não queremos que a música da Anitta tenha altere as informações da música da Ludmila né? 🤔
 
 ```javascript
 const musica = new MusicaModel({
@@ -219,36 +219,43 @@ const musica = new MusicaModel({
 
 
 ### Métodos
-Como mencionamos em aulas passadas assim como objeto, classes possuiem métotodos, que são funções que nos auxiliam a realizar ações como por exemplo: salvar um dado. Ou nosso nosso `console.log` `.log()` é um método que permite imprimir no terminal uma mensagem de texto.
+Como mencionamos em aulas passadas, assim como o objeto, as classes possuiem métodos, que são funções que nos auxiliam a realizar **ações** como por exemplo: salvar um música, ou tocar uma música, no nosso dia-a-dia usamos o console`.log`, *.log("hello word")* é um método que nos permite imprimir no terminal uma mensagem de texto.
 
 #### Métodos relação com a nossa API
 
-| OPERAÇÃO | MONGODB | MOOGOSE | DESCRIÇÃO | HttpStatus
-| --- | --- | --- | --- | ---- |
-| **C**REATE | db.insertOne() | new MusicModel() | cria um documento | 201 |
-| **R**EAD | db.find() |  MusicModel.find() | ler um documento | 200 |
-| **U**PDATE | db.updateOne() | MusicModel.updateOne() | atualiza um documento | 200 |
-| **D**ELETE | db.deleteOne() | MusicModel.deleteOne() | deleta um documento | 200 ou 204
+| OPERAÇÃO | MONGODB | MOOGOSE | DESCRIÇÃO | HttpCode
+| ---------- | -------------- | ---------------- | ----------------- | ---- |
+| **C**REATE | **db**.insertOne() | new **MusicModel**() | cria um documento | 201 |
+| **R**EAD | **db**.find() |  **MusicModel**.find() | ler um documento | 200 |
+| **U**PDATE | **db**.updateOne() | **MusicModel**.updateOne() | atualiza um documento | 200 |
+| **D**ELETE | **db**.deleteOne() | **MusicModel**.deleteOne() | deleta um documento | 200 ou 204
 
 
 ### Constructor
-Nosso `constructor` é responsável por inicializar a nossa classe, ele recebe os parametros para criar construir a instancia da classe, como por exemplo, nossa música, é assim que nossa Schema gera a música no formato que o banco espera o BJSON. 
+Nosso `constructor` é responsável por inicializar a nossa classe, ele recebe os parametros para criar construir a instancia da classe, como por exemplo, nossa música, é assim que nossa Schema gera a música no formato que o banco espera, no caso do mongo, um BJSON.
 
 ### Tipagem - Tipos primários
-Na programação, existem tipos primários, que são responsáveis por definir o tipo de informação ( dado ) que estamos trabalhando, por exemplo um número de celular `Number`, ou um email que é texto `String`, ou até mesmo se é verdadeiro(true) ou falso(false) que é um `Boolean`.
+Na programação, existem tipos primários, que são responsáveis por definir o tipo de informação ( dado ) que estamos trabalhando, por exemplo um número de celular `Number`, ou um email que é texto `String`, ou até mesmo se é verdadeiro(true) ou falso(false) que é um `Boolean`, além disso, temos o `Date` que representa uma data. 
 
  - String -> representa *texto* -> `""`
  - Number -> representa *número*  `0`
  - Boolean -> representa `true` ou `false`
- 
+ - Date -> representa uma data, por exemplo, 1970-01-13 -> `Date`
 
-### 🎥 Videos de apoio
+```typescript
+    class Musica {
+        nome: String,
+        artista: String,
+        album: String,
+        ano: Date,
+        duracao: Number,
+        curtidas: Number,
+        comentarios: String,
+        disponivel: Boolean,
+    };
+```
 
-- [Resumo Mongodb - Codigo Fonte TV](https://www.youtube.com/watch?v=4dTI1mVLX3I)
-- [nodeJs Express Mongo - Api rest full Turitorial](https://www.youtube.com/watch?v=K5QaTfE5ylk)
-- [O que é banco de dados? - Curso em Video](https://www.youtube.com/watch?v=Ofktsne-utM)
-
-### 📖 Referências
+## 📖 Referências
 - https://www.gartner.com/en/information-technology/glossary/object-data-model
 - https://medium.com/tkssharma/node-js-with-mongoose-odm-9697c09665df
 - https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose
@@ -259,21 +266,29 @@ Na programação, existem tipos primários, que são responsáveis por definir o
 - https://dzone.com/articles/sql-vs-nosql
 - https://mongoosejs.com/docs/index.html
 
+### 🎥 Videos de apoio
+
+- [Resumo Mongodb - Codigo Fonte TV](https://www.youtube.com/watch?v=4dTI1mVLX3I)
+- [nodeJs Express Mongo - Api rest full Turitorial](https://www.youtube.com/watch?v=K5QaTfE5ylk)
+- [O que é banco de dados? - Curso em Video](https://www.youtube.com/watch?v=Ofktsne-utM)
+
+
+
 ## ⚙️ Dependencias do Projeto
     - Mongoose
     - Cors
     - Express
     - Nodemom
 
-## 💻 Dependências de ambiente
+### 💻 Dependências de ambiente
 - Node `~> 16`
-- Mongodb > `~> 16`
+- Mongodb > `~> 4`
 
 
-###  🎓 Combinado da semana
+##  🎓 Combinado da semana
 
 
-### 👋🏾 Minhas redes sociais
+## 👋🏾 Minhas redes sociais
  - [LINKEDIN](https://www.linkedin.com/in/beatriz-ramerindo/)
  - [GITHUB](https://github.com/isjanebia)
  - [INSTAGRAN](https://www.instagram.com/isjanebea/)
